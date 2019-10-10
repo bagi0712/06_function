@@ -3,19 +3,39 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-void print_star()
+int sumTwo(int a, int b)
 {
-	int i;	
-	for (i=0; i<10; i++)
-		printf("*");
+	//int output;
+	//output=a+b;
+	return a+b;//output;
+}
+
+int square(int n)
+{
+	return n*n;
+}
+
+int get_max(int a, int b)
+{
+	if (a>b)
+		return a;
+	
+	return b;
 }
 
 int main(int argc, char *argv[]) {
-
-
-	print_star();
-	print_star();
-	print_star();
-			
+	
+	int a, b;
+	int output;
+	
+	a=2;
+	b=5;
+	
+	output=sumTwo(a,b);
+	printf("sumTwo : %d\n", output);
+	printf("square : %d\n", square(a));
+	output = get_max(a,b);
+	printf("get_max : %i\n", output);
+	
 	return 0;
 }
