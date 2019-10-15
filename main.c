@@ -1,20 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-//정수의 제곱을 계산하기 위한 함수 예제
-#include <stdio.h> 
-int square (int n);
+int main(int argc, char *argv[]) {
 
-int main(void)
-{
-	int result;
-	result = square(5);
-	printf("%d", result);
-}
-
-int square(int n)
-{
-	return (n*n);
+	int i;
+	int max=45;
+	
+	srand((unsigned) time(NULL));
+	for (i=0;i<6;i++)
+	{
+		printf("%d ", 1+rand()%max);
+	}
+	return 0;
 }
